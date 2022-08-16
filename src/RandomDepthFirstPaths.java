@@ -24,6 +24,7 @@ public class RandomDepthFirstPaths {
 	    
     // depth first search from v
     private void randomDFS(Graph G, int v) {
+        /* TODO */
         marked[v] = true;
         Collections.shuffle(G.adj(v));
         for (int w : G.adj(v)) {
@@ -35,6 +36,7 @@ public class RandomDepthFirstPaths {
     }
     
     public void randomNonrecursiveDFS(Graph G) {
+        /* TODO */
         marked = new boolean[G.V()];
         // to be able to iterate over each adjacency list, keeping track of which
         // vertex in each adjacency list needs to be explored next
@@ -85,7 +87,7 @@ public class RandomDepthFirstPaths {
      * This method is different compared to the original one.
      */
     public List<Integer> pathTo(int v) {
-		// TODO
+		/* TODO */
         if (this.edgeTo[v] == v) return null;
         List<Integer> sequence = new LinkedList<>();
         int tmp = v;

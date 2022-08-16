@@ -34,6 +34,7 @@ public class Maze{
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
      */
     public void addEdge(int v, int w) {
+        /* TODO */
         this.M.addEdge(v, w);
     }
     
@@ -44,6 +45,7 @@ public class Maze{
      * @return true or false
      */
     public boolean hasEdge(int v, int w) {
+        /* TODO */
         if (v > this.N || w > this.N) return false;
         return M.adj(v).contains(w) || M.adj(w).contains(v) || v == w;
     }
@@ -53,6 +55,7 @@ public class Maze{
      * @return Graph G -- Basic grid on which the Maze is built
      */
     public Graph mazegrid() {
+        /* TODO */
         Graph G = new Graph(N*N);
         // initialize a 2d array as representation of the grid
         int[][] nodes = new int[N][N];
@@ -85,6 +88,7 @@ public class Maze{
      * The maze is build with a randomized DFS as the Graph M.
      */
     private void buildMaze() {
+        /* TODO */
         Graph g = this.mazegrid();
         RandomDepthFirstPaths r = new RandomDepthFirstPaths(g, startnode);
         r.randomDFS(g);
@@ -101,6 +105,7 @@ public class Maze{
      * @return List<Integer> -- a list of nodes on the path from v to w (both included) in the right order.
      */
     public List<Integer> findWay(int v, int w) {
+        /* TODO */
         DepthFirstPaths d = new DepthFirstPaths(M, w);
         List<Integer> way = new LinkedList<>();
         d.dfs(M);

@@ -64,6 +64,7 @@ public class DepthFirstPaths {
 
     // depth first search from v
     private void dfs(Graph G, int v) {
+        /* TODO */
         int dist = 0;
         marked[v] = true;
         this.preorder.offer(v);
@@ -85,6 +86,7 @@ public class DepthFirstPaths {
      * @param dist the current distance to source
      */
     private void dfs(Graph G, int v, int dist) {
+        /* TODO: helper function */
         marked[v] = true;
         dist++;
         this.preorder.offer(v);
@@ -99,6 +101,7 @@ public class DepthFirstPaths {
     }
 
     public void nonrecursiveDFS(Graph G) {
+        /* TODO */
         marked = new boolean[G.V()];
         // to be able to iterate over each adjacency list, keeping track of which
         // vertex in each adjacency list needs to be explored next
@@ -155,7 +158,7 @@ public class DepthFirstPaths {
      * This method is different compared to the original one.
      */
     public List<Integer> pathTo(int v) {
-		// TODO
+		/* TODO */
         if (this.edgeTo[v] == v) return null;
         List<Integer> sequence = new LinkedList<>();
         int tmp = v;
